@@ -7,13 +7,13 @@
     | - name: string |
     +----------------+
 
-    +------------------+
-    |      Dish        |
-    +------------------+
-    | - id: int        |
-    | - name: string   |
-    | - restaurant: string |
-    +------------------+
+    +-----------------------+
+    |      Dish             |
+    +-----------------------+
+    | - id: int             |
+    | - name: string        |
+    | - restaurant: string  |
+    +-----------------------+
 
     +----------------------+
     |       Review         |
@@ -56,20 +56,23 @@
     +---------------------------------------------------------+
 */
 
-/*  
-    restaurant-review/
+/*  restaurant-review-system
     │
-    ├── main.cpp
-    ├── core/           (domain objects)
-    │   ├── User.h
-    │   ├── Dish.h
-    │   └── Review.h
+    ├─ restaurant-review/
+    │   ├─ main.cpp
+    │   ├─ core/           (domain objects)
+    │   │   ├── User.h
+    │   │   ├── Dish.h
+    │   │   └── Review.h
+    │   │
+    │   ├─ service/        (business logic)
+    │   │   └── ReviewSystem.h
+    │   │
+    │   └─ util/
+    │        └── IdGenerator.h
     │
-    ├── service/        (business logic)
-    │   └── ReviewSystem.h
-    │
-    └── util/
-        └── IdGenerator.h
+    ├─ README.md
+    └─ LICENSE.txt
 */
 
 #include "service/ReviewSystem.h"
