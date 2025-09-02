@@ -42,7 +42,7 @@ It allows users to register, add dishes, write reviews, like/unlike dishes, and 
 ## 🛠️ Installation & Compilation
 
     Make sure you have **g++** (C++17 or later) installed.
-
+    ```
     # Clone this repository
     git clone https://github.com/your-username/restaurant-review-system.git
     cd restaurant-review-system
@@ -52,6 +52,7 @@ It allows users to register, add dishes, write reviews, like/unlike dishes, and 
 
     # Run
     ./review_app
+    ```
 ---
 
 ## ▶️ Example Output
@@ -74,9 +75,9 @@ It allows users to register, add dishes, write reviews, like/unlike dishes, and 
     | - id: int      |        | - id: int             |        | - id: int            |
     | - name: string |        | - name: string        |        | - userId: int        |
     +----------------+        | - restaurant: string  |        | - dishId: int        |
-                            +-----------------------+        | - rating: int        |
-                                                            | - comment: string    |
-                                                            +----------------------+
+                              +-----------------------+        | - rating: int        |
+                                                               | - comment: string    |
+                                                               +----------------------+
 
     +--------------------------+        +-----------------------------------------------------+
     |      IdGenerator         |        |                   ReviewSystem                      |
