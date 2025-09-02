@@ -47,6 +47,7 @@ Clone this repository: `git clone https://github.com/your-username/restaurant-re
 Directory: `cd restaurant-review-system`
 Compile: `g++ -std=c++17 main.cpp -o review_app`
 Run: `./review_app`
+
 ---
 
 ## ▶️ Example Output
