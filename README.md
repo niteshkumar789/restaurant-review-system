@@ -70,59 +70,59 @@ It allows users to register, add dishes, write reviews, like/unlike dishes, and 
 
 ## 🧩 UML Class Diagram
 
-+----------------+
-|     User       |
-+----------------+
-| - id: int      |
-| - name: string |
-+----------------+
+    +----------------+
+    |     User       |
+    +----------------+
+    | - id: int      |
+    | - name: string |
+    +----------------+
 
-+-----------------------+
-|        Dish           |       
-+-----------------------+
-| - id: int             |
-| - name: string        |
-| - restaurant: string  |
-+-----------------------+
+    +-----------------------+
+    |        Dish           |       
+    +-----------------------+
+    | - id: int             |
+    | - name: string        |
+    | - restaurant: string  |
+    +-----------------------+
 
-+----------------------+
-|       Review         |
-+----------------------+
-| - id: int            |
-| - userId: int        |
-| - dishId: int        |
-| - rating: int        |
-| - comment: string    |
-+----------------------+
+    +----------------------+
+    |       Review         |
+    +----------------------+
+    | - id: int            |
+    | - userId: int        |
+    | - dishId: int        |
+    | - rating: int        |
+    | - comment: string    |
+    +----------------------+
 
-+--------------------------+       
-|      IdGenerator         |
-+--------------------------+
-| - counter: atomic<int>   |
-| + next(): int            |
-+--------------------------+
+    +--------------------------+       
+    |      IdGenerator         |
+    +--------------------------+
+    | - counter: atomic<int>   |
+    | + next(): int            |
+    +--------------------------+
 
-+-----------------------------------------------------+
-|                   ReviewSystem                      |
-+-----------------------------------------------------+
-| - userIds: IdGenerator                              |
-| - dishIds: IdGenerator                              |
-| - reviewIds: IdGenerator                            |
-| - users: map<int, User>                             |
-| - dishes: map<int, Dish>                            |
-| - reviewsByDish: map<int, vector<Review>>           |
-| - likesByDish: map<int, set<int>>                   |
-+-----------------------------------------------------+
-| + addUser(name: string): int                        |
-| + addDish(name: string, restaurant: string): int    |
-| + addReview(userId, dishId, rating, comment): int   |
-| + getReviews(dishId: int): vector<Review>           |
-| + likeDish(userId, dishId)                          |
-| + unlikeDish(userId, dishId)                        |
-| + likeCount(dishId): int                            |
-| + averageRating(dishId): double                     |
-| + printDishSummary(dishId)                          |
-+-----------------------------------------------------+
+    +-----------------------------------------------------+
+    |                   ReviewSystem                      |
+    +-----------------------------------------------------+
+    | - userIds: IdGenerator                              |
+    | - dishIds: IdGenerator                              |
+    | - reviewIds: IdGenerator                            |
+    | - users: map<int, User>                             |
+    | - dishes: map<int, Dish>                            |
+    | - reviewsByDish: map<int, vector<Review>>           |
+    | - likesByDish: map<int, set<int>>                   |
+    +-----------------------------------------------------+
+    | + addUser(name: string): int                        |
+    | + addDish(name: string, restaurant: string): int    |
+    | + addReview(userId, dishId, rating, comment): int   |
+    | + getReviews(dishId: int): vector<Review>           |
+    | + likeDish(userId, dishId)                          |
+    | + unlikeDish(userId, dishId)                        |
+    | + likeCount(dishId): int                            |
+    | + averageRating(dishId): double                     |
+    | + printDishSummary(dishId)                          |
+    +-----------------------------------------------------+
 
 ---
 
