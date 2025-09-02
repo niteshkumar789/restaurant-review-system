@@ -43,7 +43,7 @@ It allows users to register, add dishes, write reviews, like/unlike dishes, and 
 
     Make sure you have **g++** (C++17 or later) installed.
 
-    ```bash
+    ```
     # Clone this repository
     git clone https://github.com/your-username/restaurant-review-system.git
     cd restaurant-review-system
@@ -58,49 +58,71 @@ It allows users to register, add dishes, write reviews, like/unlike dishes, and 
 
 ## ▶️ Example Output
 
-Dish: Margherita Pizza @ Luigi's
-Likes: 2
-Avg rating: 4.5
+    Dish: Margherita Pizza @ Luigi's
+    Likes: 2
+    Avg rating: 4.5
 
-Dish: Dragon Roll @ Sakura
-Likes: 1
-Avg rating: 4
+    Dish: Dragon Roll @ Sakura
+    Likes: 1
+    Avg rating: 4
 
 ---
 
 ## 🧩 UML Class Diagram
 
-+----------------+        +-----------------------+        +----------------------+
-|     User       |        |        Dish           |        |       Review         |
-+----------------+        +-----------------------+        +----------------------+
-| - id: int      |        | - id: int             |        | - id: int            |
-| - name: string |        | - name: string        |        | - userId: int        |
-+----------------+        | - restaurant: string  |        | - dishId: int        |
-                          +-----------------------+        | - rating: int        |
-                                                           | - comment: string    |
-                                                           +----------------------+
++----------------+
+|     User       |
++----------------+
+| - id: int      |
+| - name: string |
++----------------+
 
-+--------------------------+        +-----------------------------------------------------+
-|      IdGenerator         |        |                   ReviewSystem                      |
-+--------------------------+        +-----------------------------------------------------+
-| - counter: atomic<int>   |        | - userIds: IdGenerator                              |
-| + next(): int            |        | - dishIds: IdGenerator                              |
-+--------------------------+        | - reviewIds: IdGenerator                            |
-                                    | - users: map<int, User>                             |
-                                    | - dishes: map<int, Dish>                            |
-                                    | - reviewsByDish: map<int, vector<Review>>           |
-                                    | - likesByDish: map<int, set<int>>                   |
-                                    +-----------------------------------------------------+
-                                    | + addUser(name: string): int                        |
-                                    | + addDish(name: string, restaurant: string): int    |
-                                    | + addReview(userId, dishId, rating, comment): int   |
-                                    | + getReviews(dishId: int): vector<Review>           |
-                                    | + likeDish(userId, dishId)                          |
-                                    | + unlikeDish(userId, dishId)                        |
-                                    | + likeCount(dishId): int                            |
-                                    | + averageRating(dishId): double                     |
-                                    | + printDishSummary(dishId)                          |
-                                    +-----------------------------------------------------+
++-----------------------+
+|        Dish           |       
++-----------------------+
+| - id: int             |
+| - name: string        |
+| - restaurant: string  |
++-----------------------+
+
++----------------------+
+|       Review         |
++----------------------+
+| - id: int            |
+| - userId: int        |
+| - dishId: int        |
+| - rating: int        |
+| - comment: string    |
++----------------------+
+
++--------------------------+       
+|      IdGenerator         |
++--------------------------+
+| - counter: atomic<int>   |
+| + next(): int            |
++--------------------------+
+
++-----------------------------------------------------+
+|                   ReviewSystem                      |
++-----------------------------------------------------+
+| - userIds: IdGenerator                              |
+| - dishIds: IdGenerator                              |
+| - reviewIds: IdGenerator                            |
+| - users: map<int, User>                             |
+| - dishes: map<int, Dish>                            |
+| - reviewsByDish: map<int, vector<Review>>           |
+| - likesByDish: map<int, set<int>>                   |
++-----------------------------------------------------+
+| + addUser(name: string): int                        |
+| + addDish(name: string, restaurant: string): int    |
+| + addReview(userId, dishId, rating, comment): int   |
+| + getReviews(dishId: int): vector<Review>           |
+| + likeDish(userId, dishId)                          |
+| + unlikeDish(userId, dishId)                        |
+| + likeCount(dishId): int                            |
+| + averageRating(dishId): double                     |
+| + printDishSummary(dishId)                          |
++-----------------------------------------------------+
 
 ---
 
