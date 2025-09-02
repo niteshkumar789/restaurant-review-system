@@ -1,7 +1,7 @@
 # 🍽️ Restaurant Review System (C++)
 
-A simple **low-level design (LLD)** implementation of a restaurant review system in C++.  
-It allows users to register, add dishes, write reviews, like/unlike dishes, and view summaries with average ratings and like counts.
+A simple `low-level design (LLD)` implementation of a restaurant review system in C++.  
+It allows users to `register`, `add dishes`, `write reviews`, like/unlike dishes, and `view summaries` with `average ratings` and `like counts`.
 
 ---
 
@@ -100,16 +100,15 @@ Make sure you have **g++** (C++17 or later) installed.
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
-Feel free to open a PR or raise an issue.
+Contributions, issues, and feature requests are welcome! Feel free to open a PR or raise an issue.
 
 ---
 
 ## 📜 License
 
-This project is `licensed` under the MIT License.
+This project is `licensed` under the `MIT License`.
 
 ---
 
 ## ✨ Author
-Nitesh Kumar 3rd Year B.Tech (CSE)
+`Nitesh Kumar` 3rd Year B.Tech (CSE)
