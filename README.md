@@ -41,12 +41,12 @@ It allows users to register, add dishes, write reviews, like/unlike dishes, and 
 ---
 
 ## 🛠️ Installation & Compilation
+Make sure you have **g++** (C++17 or later) installed.    
 
-    Make sure you have **g++** (C++17 or later) installed.
-    Clone this repository: `git clone https://github.com/your-username/restaurant-review-system.git`
-    Directory: `cd restaurant-review-system`
-    Compile: `g++ -std=c++17 main.cpp -o review_app`
-    Run: `./review_app`
+Clone this repository: `git clone https://github.com/your-username/restaurant-review-system.git`
+Directory: `cd restaurant-review-system`
+Compile: `g++ -std=c++17 main.cpp -o review_app`
+Run: `./review_app`
 ---
 
 ## ▶️ Example Output
