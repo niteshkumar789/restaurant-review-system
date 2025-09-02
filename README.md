@@ -7,20 +7,21 @@ It allows users to register, add dishes, write reviews, like/unlike dishes, and 
 
 ## 📂 Project Structure
 
-    restaurant-review-system/
+    restaurant-review-system
     │
-    ├─ core/ # Domain models
-    │ ├── User.h
-    │ ├── Dish.h
-    │ └── Review.h
+    ├─ restaurant-review/
+    │   ├─ main.cpp (Example usage)
+    │   ├─ core/           (domain models)
+    │   │   ├── User.h
+    │   │   ├── Dish.h
+    │   │   └── Review.h
+    │   │
+    │   ├─ service/        (business logic)
+    │   │   └── ReviewSystem.h
+    │   │
+    │   └─ util/ (Utility classes)
+    │        └── IdGenerator.h
     │
-    ├─ service/ # Business logic
-    │ └── ReviewSystem.h
-    │
-    ├─ util/ # Utility classes
-    │ └── IdGenerator.h
-    │
-    ├─ main.cpp # Example usage
     ├─ README.md
     └─ LICENSE.txt
 
@@ -42,17 +43,10 @@ It allows users to register, add dishes, write reviews, like/unlike dishes, and 
 ## 🛠️ Installation & Compilation
 
     Make sure you have **g++** (C++17 or later) installed.
-    ```
-    # Clone this repository
-    git clone https://github.com/your-username/restaurant-review-system.git
-    cd restaurant-review-system
-
-    # Compile
-    g++ -std=c++17 main.cpp -o review_app
-
-    # Run
-    ./review_app
-    ```
+    Clone this repository: `git clone https://github.com/your-username/restaurant-review-system.git`
+    Directory: `cd restaurant-review-system`
+    Compile: `g++ -std=c++17 main.cpp -o review_app`
+    Run: `./review_app`
 ---
 
 ## ▶️ Example Output
@@ -112,7 +106,7 @@ Feel free to open a PR or raise an issue.
 
 ## 📜 License
 
-This project is licensed under the MIT License.
+This project is `licensed` under the MIT License.
 
 ---
 
